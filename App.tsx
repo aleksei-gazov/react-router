@@ -19,7 +19,7 @@ export default function App() {
   ])
 
 const setserchArticleHandler= (title: string)=> {
-
+console.log(Date())
 }
 
   return (

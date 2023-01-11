@@ -1,6 +1,5 @@
 import * as React from "react";
 type InputPropsType = {
-    title: string
     serchArticle: (title: string)=> void
 }
 
@@ -10,10 +9,22 @@ const [title, setTitle] = React.useState('')
     const onChangeInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
        setTitle(event.currentTarget.value)
     }
-    const SearchHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-       props.serchArticle(event.currentTarget.value)
+    const SearchHandler = () => {
+       props.serchArticle(title)
+       setTitle('')
     }
     return (
-        <input  value={title} onChange={onChangeInputHandler} onBlur={SearchHandler}/>
+      <div>
+  <input  value={title} onChange={onChangeInputHandler} onBlur={SearchHandler}/>
+        <input name="city" list="cities"  />
+<datalist id="cities">
+   <option value="Naples" />
+   <option value="London" />
+   <option value="Berlin" />
+   <option value="New York" />
+   <option value="Frattamaggiore" />
+</datalist>
+      </div>
+      
     )
 }

@@ -17,7 +17,6 @@ const serchArticleHandler = (title: string) => {
   return (
     <div>
    <Input 
-   title={'cc'}
    serchArticle={serchArticleHandler}
    />
    {props.bodySerch.map((t)=> {
