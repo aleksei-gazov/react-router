@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { TitleType } from '../App';
+import { Button } from '../Component/Button';
 import { Input } from '../Component/Input';
 
 
@@ -7,6 +8,7 @@ type BlogPropsType = {
   serchArticleHandlerProps: (title: string)=> void
   bodySerch: TitleType[]
   filtredHandler: (value: string)=> void
+  addArticleHandle: ()=> void
 
 }
 
@@ -16,7 +18,9 @@ const serchArticleHandler = (title: string) => {
   props.serchArticleHandlerProps(title)
 }
 
-
+const addArticle = ()=> {
+  props.addArticleHandle()
+}
 
   return (
     <div>
@@ -24,14 +28,16 @@ const serchArticleHandler = (title: string) => {
    serchArticle={serchArticleHandler}
    filtred={props.filtredHandler}
    />
-   {props.bodySerch.map((t)=> {
+   {props.bodySerch.map((t, index)=> {
      return (
-       <tr key={t.id}>
+       <tr key={index}>
          <td >{t.img}</td>---
+         <td >{t.data}</td>---
          <td >{t.title}</td>
        </tr>
      )
    })}
+   <Button callBack={addArticle} name={'accordion'}/>
     </div>
   );
 }
