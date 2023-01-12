@@ -1,3 +1,25 @@
 h1, p {
   font-family: Lato;
 }
+.container {
+  margin: 0 auto;
+  display: grid;
+  /* width: 1200px; */
+  grid-template-areas: 
+  "h h"
+  "n c";
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 10fr;
+}
+ .container_blog {
+  grid-area: c;
+  background-color: rgb(138, 226, 214);
+}
+.header {
+  grid-area: h;
+  background-color: aquamarine;
+}
+.aside {
+  grid-area: n;
+  background-color: rgb(0, 247, 255);
+}

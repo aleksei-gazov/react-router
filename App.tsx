@@ -1,5 +1,7 @@
 import * as React from 'react';
+import { Aside } from './Component/Aside';
 import Blog from './Component/blog';
+import { Header } from './Component/Header';
 import './style.css';
 
 export type TitleType = {
@@ -32,12 +34,16 @@ console.log(Date())
 }
 
  return (
-    <div>
+    <div className={'container'}>
+      <Header/>
+      <Aside/>
+      <div className={'container_blog'}>
     <Blog 
     bodySerch={titleInput}
     serchArticleHandlerProps={setserchArticleHandler}   
     filtredHandler={filtredHandler}
     />
+    </div>
     </div>
   );
 }

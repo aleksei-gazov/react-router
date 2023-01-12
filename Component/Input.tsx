@@ -10,7 +10,7 @@ const [title, setTitle] = React.useState('')
     const onChangeInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
        setTitle(event.currentTarget.value)
     }
-    const onChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const onChangeHandler = (event: React.ChangeEvent<HTMLSelectElement>) => {
       props.filtred(event.currentTarget.value)
     }
     const SearchHandler = () => {
@@ -20,13 +20,15 @@ const [title, setTitle] = React.useState('')
     return (
       <div>
   <input  value={title} onChange={onChangeInputHandler} onBlur={SearchHandler}/>
-        <input name="city" list="cities"onBlur={onChangeHandler} />
-<datalist id="cities">
-   <option value='Friends' />
-   <option value="London" />
-   <option value="Berlin" />
+   <select onChange={onChangeHandler} >
+   <option value="">Выберите значение</option>
+  <option value='Friends'>Friends</option>
+  <option value="London">London</option>
+  <option value="Berlin">Berlin</option>
   
-</datalist>
+</select>
+
+
       </div>
       
     )
