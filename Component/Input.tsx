@@ -22,9 +22,9 @@ const [title, setTitle] = React.useState('')
   <input  value={title} onChange={onChangeInputHandler} onBlur={SearchHandler}/>
    <select onChange={onChangeHandler} >
    <option value="">Выберите значение</option>
-  <option value='Friends'>Friends</option>
-  <option value="London">London</option>
-  <option value="Berlin">Berlin</option>
+  <option value='newArticle'>newArticle</option>
+  <option value="sortArticleA_Z">Sort Article A-Z</option>
+  <option value="sortArticleZ_A">Sort Article Z-A</option>
   
 </select>
 
