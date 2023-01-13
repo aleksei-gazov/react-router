@@ -4,6 +4,7 @@ import { Button } from '../Component/Button';
 import { Input } from '../Component/Input';
 
 
+
 type BlogPropsType = {
   serchArticleHandlerProps: (title: string)=> void
   bodySerch: TitleType[]
@@ -28,13 +29,17 @@ const addArticle = ()=> {
    serchArticle={serchArticleHandler}
    filtred={props.filtredHandler}
    />
-   {props.bodySerch.map((t, index)=> {
+   {props.bodySerch.map((t)=> {
      return (
-       <tr key={index}>
+      
+       <tr key={t.id}>
          <td >{t.img}</td>---
          <td >{t.data}</td>---
-         <td >{t.title}</td>
+       
+        <td >{t.title}</td>
+         
        </tr>
+       
      )
    })}
    <Button callBack={addArticle} name={'accordion'}/>
