@@ -20,17 +20,6 @@ return (
           </li>
         </ul>
       </nav>
-      <div>
-      <button>
-        Blog
-      </button>
-  </div>
-  <button>
-       
-Article
-      </button>
-  <div>
-  </div>
   </div>
 )
 

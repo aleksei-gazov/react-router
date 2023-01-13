@@ -31,14 +31,14 @@ const addArticle = ()=> {
    />
    {props.bodySerch.map((t)=> {
      return (
-      
-       <tr key={t.id}>
-         <td >{t.img}</td>---
-         <td >{t.data}</td>---
-       
-        <td >{t.title}</td>
-         
+      <div className={'blog'}>
+        <div className={'img'}>{t.img}</div>
+ <tr key={t.id}>
+         <td >{t.data}</td>---  
+        <td >{t.title}</td>      
        </tr>
+      </div>
+      
        
      )
    })}

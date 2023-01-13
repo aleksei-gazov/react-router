@@ -4,7 +4,7 @@ import Blog from './Component/blog';
 import { Header } from './Component/Header';
 import './style.css';
 import {v1} from 'uuid';
-import {Routes, Route} from 'react-router-dom';
+import {Routes, Route, Navigate} from 'react-router-dom';
 import { Article } from './Component/Article';
 
 export type TitleType = {
@@ -61,6 +61,7 @@ let a = titleInput
       <Aside/>
       <div className={'container_blog'}>
       <Routes>
+      <Route path="/" element={<Navigate to="/blog"/>}/>
       <Route path="/blog" element={<Blog 
     bodySerch={titleInput}
     serchArticleHandlerProps={setserchArticleHandler}   
