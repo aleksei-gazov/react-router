@@ -27,7 +27,7 @@ export default function App() {
 {id: v1(), data: data, img: 'photo', title: "Berlin", text: 'hello main friends'},
   ])
   const [titleInput, setTitleInput] = React.useState<Array<TitleType>>(titles)
-console.log(titleInput)
+// console.log(titleInput)
   const dopTitles = [
     {id: v1(), data: '11.01.2023', img: 'photo', title: 'Friends', text: 'hello main friends'},
 {id: v1(), data: data, img: 'photo', title: "London", text: 'hello main friends'},

@@ -11,6 +11,8 @@ return (
     <div>
          <CastomLink to='/home' className={setActive}>HomePage</CastomLink>-
         <NavLink to='/content' className={setActive}>Content</NavLink>-
+        <NavLink to='/blog' className={setActive}>BlogPage</NavLink>-
+        <NavLink to='/blog/id' className={setActive}>SinglePage</NavLink>-
         <NavLink to='/about' className={setActive}>AboutPage</NavLink>-
     </div>
 <Outlet/>
