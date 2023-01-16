@@ -6,6 +6,8 @@ import './style.css';
 import {v1} from 'uuid';
 import {Routes, Route, Navigate} from 'react-router-dom';
 import { Article } from './Component/Article';
+import { Rout } from './Component/Rout/Rout';
+
 
 export type TitleType = {
   id: string
@@ -57,7 +59,8 @@ let a = titleInput
  return (
   
     <div className={'container'}>
-      <Header/>
+   <Rout/>
+      {/* <Header/>
       <Aside/>
       <div className={'container_blog'}>
       <Routes>
@@ -70,7 +73,10 @@ let a = titleInput
     />} />
 <Route path="/article" element={<Article/>} />
 </Routes>
-    </div>
+    </div> */}
+
+
+
     </div>
   );
 }
